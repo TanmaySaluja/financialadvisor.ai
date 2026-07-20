@@ -24,7 +24,7 @@ Bit By Bit Wealth replaces traditional, static financial spreadsheets and expens
 
 ---
 
-## 📂 Project Structure
+## 📂 Project-Structure
 
 ```
 ├── static/
