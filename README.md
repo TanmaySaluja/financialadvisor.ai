@@ -2,6 +2,8 @@
 
 An autonomous, cognitive wealth management and budget planning pipeline built on Python, **LangGraph**, **FastAPI**, and **Groq Cloud (Llama-3.3-70B)**.
 
+👉 **Live Production Deployment:** [https://financialadvisor-ai.vercel.app/](https://financialadvisor-ai.vercel.app/)
+
 Bit By Bit Wealth replaces traditional, static financial spreadsheets and expensive human advisors with an interactive, multi-agent conversational chatbot and real-time dashboard.
 
 ---
@@ -21,6 +23,7 @@ Bit By Bit Wealth replaces traditional, static financial spreadsheets and expens
 *   **Backend:** Python, LangGraph (StateGraph), FastAPI, Uvicorn, Pydantic
 *   **Inference:** Groq Cloud API (`llama-3.3-70b-versatile`)
 *   **Frontend:** HTML5, CSS3 (Vanilla Glassmorphism), JavaScript (ES6+), Marked.js
+*   **Hosting:** Vercel (Serverless Functions)
 
 ---
 
@@ -32,9 +35,10 @@ Bit By Bit Wealth replaces traditional, static financial spreadsheets and expens
 │   ├── style.css         # Glassmorphism design tokens & styles
 │   ├── app.js            # Frontend DOM operations & state controllers
 │   └── dollar_bill.jpg   # Generated background transition asset
-├── api.py                # FastAPI HTTP routing & schemas
+├── main.py               # FastAPI HTTP routing, entrypoint & schemas
 ├── financial_agent.py    # LangGraph StateGraph agent logic
 ├── requirements.txt      # Python dependencies list
+├── vercel.json           # Vercel deployment configuration
 ├── .gitignore            # Git exclusion rules
 ├── .env.example          # Sample environment key variables file
 └── README.md             # Project documentation
@@ -42,7 +46,7 @@ Bit By Bit Wealth replaces traditional, static financial spreadsheets and expens
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Installation & Setup (Local Development)
 
 ### 1. Clone the Repository
 ```bash
@@ -72,6 +76,6 @@ GROQ_API_KEY=your_groq_api_key_here
 
 ### 5. Launch the Application
 ```bash
-python -m uvicorn api:app --port 8000
+python -m uvicorn main:app --port 8000
 ```
-Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** in your browser to start a consultation.
+Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** in your browser to start a local consultation.
